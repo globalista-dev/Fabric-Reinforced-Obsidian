@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#I#",
+        "IOI",
+        "#I#"
+    ],
+    "key": {
+        "#": {
+            "item": "romod:dark_iron_ingot"
+        },
+        "I": {
+            "item": "romod:dark_iron_bars"
+        },
+        "O": {
+            "item": "minecraft:obsidian"
+        }
+    },
+    "result": {
+        "item": "romod:reinforced_obsidian",
+        "count": 1
+    }
+}

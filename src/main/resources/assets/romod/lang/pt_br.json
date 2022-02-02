@@ -1,0 +1,9 @@
+{
+  "block.romod.reinforced_obsidian": "Obsidiana reforçada",
+  "block.romod.dark_iron_block": "Bloco de ferro negro",
+  "block.romod.dark_iron_bars": "Grades de ferro negro",
+
+  "item.romod.dark_iron_ingot": "Barra de ferro negro",
+
+  "itemGroup.romod.rogroup": "Obsidiana reforçada para Fabric"
+}
