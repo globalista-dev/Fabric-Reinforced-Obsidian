@@ -13,7 +13,7 @@ public class RoMod implements ModInitializer {
 	public void onInitialize() {
 
 
-		
+
 		LOGGER.info("Fabric Reinforced Obsidian!");
 	}
 }
