@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "Fabric Reinforced Obsidian",
-  "description": "Adds the EnderIO reinforced obsidian in the most recents versions of Minecraft.",
+  "description": "Adds the EnderIO reinforced obsidian in the most recent versions of Minecraft.",
   "authors": [
     "yGlobalista"
   ],
