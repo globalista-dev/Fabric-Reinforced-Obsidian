@@ -1,5 +1,8 @@
 {
   "block.romod.reinforced_obsidian": "Reinforced Obsidian",
+  "block.romod.reinforced_obsidian_slab": "Reinforced Obsidian Slab",
+  "block.romod.reinforced_obsidian_stairs": "Reinforced Obsidian Stairs",
+  "block.romod.reinforced_obsidian_wall": "Reinforced Obsidian Wall",
   "block.romod.dark_iron_block": "Dark Iron Block",
   "block.romod.dark_iron_bars": "Dark Iron Bars",
 

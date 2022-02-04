@@ -1,10 +1,12 @@
 package com.globalista.romod;
 
 import com.globalista.romod.block.ModBlocks;
-import com.globalista.romod.block.ModPaneBlocks;
+import com.globalista.romod.block.ModPaneBlock;
 import com.globalista.romod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
@@ -22,9 +24,9 @@ public class RoMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DARK_IRON_BARS, RenderLayer.getCutout());
 		ModBlocks.callBlocks();
 		ModItems.callItems();
-		ModPaneBlocks.callPaneBlocks();
 
 		LOGGER.info("Fabric Reinforced Obsidian!");
 	}

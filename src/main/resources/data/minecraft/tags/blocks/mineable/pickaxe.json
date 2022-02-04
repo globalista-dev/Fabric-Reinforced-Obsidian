@@ -2,6 +2,9 @@
   "replace": false,
   "values": [
     "romod:reinforced_obsidian",
+    "romod:reinforced_obsidian_slab",
+    "romod:reinforced_obsidian_stairs",
+    "romod:reinforced_obsidian_wall",
     "romod:dark_iron_block",
     "romod:dark_iron_bars"
   ]
