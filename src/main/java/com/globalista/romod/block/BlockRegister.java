@@ -9,9 +9,9 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
-public interface BlockRegister {
+public class BlockRegister {
 
-    static Block registerBlock(String name, Block block, ItemGroup group) {
+    public static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(RoMod.MOD_ID, name), block);
     }

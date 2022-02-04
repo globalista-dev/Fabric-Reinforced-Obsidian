@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "romod:reinforced_obsidian"
+  },
+  "result": "romod:reinforced_obsidian_stairs",
+  "count": 1
+}
