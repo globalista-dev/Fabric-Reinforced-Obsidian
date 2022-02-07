@@ -1,7 +1,6 @@
 package com.globalista.romod;
 
 import com.globalista.romod.block.ModBlocks;
-import com.globalista.romod.block.ModPaneBlock;
 import com.globalista.romod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -25,6 +24,9 @@ public class RoMod implements ModInitializer {
 	public void onInitialize() {
 
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.DARK_IRON_BARS, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.REINFORCED_TINTED_GLASS, RenderLayer.getTranslucent());
+		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.REINFORCED_GLASS, RenderLayer.getTranslucent());
+
 		ModBlocks.callBlocks();
 		ModItems.callItems();
 

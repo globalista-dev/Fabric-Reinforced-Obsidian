@@ -1,5 +1,7 @@
 {
   "block.romod.reinforced_obsidian": "Reinforced Obsidian",
+  "block.romod.reinforced_glass": "Reinforced Glass",
+  "block.romod.reinforced_tinted_glass": "Reinforced Tinted Glass",
   "block.romod.reinforced_obsidian_slab": "Reinforced Obsidian Slab",
   "block.romod.reinforced_obsidian_stairs": "Reinforced Obsidian Stairs",
   "block.romod.reinforced_obsidian_wall": "Reinforced Obsidian Wall",
