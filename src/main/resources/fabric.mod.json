@@ -22,14 +22,11 @@
       "com.globalista.romod.RoMod"
     ]
   },
-  "mixins": [
-    "romod.mixins.json"
-  ],
 
   "depends": {
-    "fabricloader": ">=0.13.3",
+    "fabricloader": ">=0.14.7",
     "fabric": "*",
-    "minecraft": "1.18.2",
+    "minecraft": "1.19",
     "java": ">=17"
   },
   "suggests": {
