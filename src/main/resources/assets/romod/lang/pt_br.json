@@ -5,10 +5,6 @@
   "block.romod.reinforced_obsidian_slab": "Laje de obsidiana reforçada",
   "block.romod.reinforced_obsidian_stairs": "Escadas de obsidiana reforçada",
   "block.romod.reinforced_obsidian_wall": "Parede de obsidiana reforçada",
-  "block.romod.dark_iron_block": "Bloco de ferro negro",
-  "block.romod.dark_iron_bars": "Grades de ferro negro",
-
-  "item.romod.dark_iron_ingot": "Barra de ferro negro",
-
+  "block.romod.reinforced_iron_bars": "Grades de ferro reforçado",
   "itemGroup.romod.rogroup": "Obsidiana reforçada para Fabric"
 }

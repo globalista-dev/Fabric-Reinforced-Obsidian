@@ -5,10 +5,6 @@
   "block.romod.reinforced_obsidian_slab": "Reinforced Obsidian Slab",
   "block.romod.reinforced_obsidian_stairs": "Reinforced Obsidian Stairs",
   "block.romod.reinforced_obsidian_wall": "Reinforced Obsidian Wall",
-  "block.romod.dark_iron_block": "Dark Iron Block",
-  "block.romod.dark_iron_bars": "Dark Iron Bars",
-
-  "item.romod.dark_iron_ingot": "Dark Iron Ingot",
-
+  "block.romod.reinforced_iron_bars": "Reinforced Iron Bars",
   "itemGroup.romod.rogroup": "Fabric Reinforced Obsidian"
 }

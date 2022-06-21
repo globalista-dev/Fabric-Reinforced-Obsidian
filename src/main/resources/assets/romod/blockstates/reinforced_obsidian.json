@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "romod:block/reinforced_obsidian"}
+    "": {
+      "model": "romod:block/reinforced_obsidian"
+    }
   }
 }

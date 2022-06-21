@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "romod:dark_iron_block"
+          "name": "romod:reinforced_iron_bars"
         }
       ]
     }

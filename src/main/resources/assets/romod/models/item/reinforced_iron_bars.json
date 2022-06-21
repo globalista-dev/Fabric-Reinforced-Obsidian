@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "romod:block/dark_iron_bars"
+    "layer0": "romod:block/reinforced_iron_bars"
   }
 }

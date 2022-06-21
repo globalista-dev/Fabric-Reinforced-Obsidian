@@ -2,7 +2,7 @@
   "multipart": [
     {
       "apply": {
-        "model": "romod:block/dark_iron_bars_post_ends"
+        "model": "romod:block/reinforced_iron_bars_post_ends"
       }
     },
     {
@@ -13,7 +13,7 @@
         "east": "false"
       },
       "apply": {
-        "model": "romod:block/dark_iron_bars_post"
+        "model": "romod:block/reinforced_iron_bars_post"
       }
     },
     {
@@ -24,7 +24,7 @@
         "east": "false"
       },
       "apply": {
-        "model": "romod:block/dark_iron_bars_cap"
+        "model": "romod:block/reinforced_iron_bars_cap"
       }
     },
     {
@@ -35,7 +35,7 @@
         "east": "true"
       },
       "apply": {
-        "model": "romod:block/dark_iron_bars_cap",
+        "model": "romod:block/reinforced_iron_bars_cap",
         "y": 90
       }
     },
@@ -47,7 +47,7 @@
         "east": "false"
       },
       "apply": {
-        "model": "romod:block/dark_iron_bars_cap_alt"
+        "model": "romod:block/reinforced_iron_bars_cap_alt"
       }
     },
     {
@@ -58,7 +58,7 @@
         "east": "false"
       },
       "apply": {
-        "model": "romod:block/dark_iron_bars_cap_alt",
+        "model": "romod:block/reinforced_iron_bars_cap_alt",
         "y": 90
       }
     },
@@ -67,7 +67,7 @@
         "north": "true"
       },
       "apply": {
-        "model": "romod:block/dark_iron_bars_side"
+        "model": "romod:block/reinforced_iron_bars_side"
       }
     },
     {
@@ -75,7 +75,7 @@
         "east": "true"
       },
       "apply": {
-        "model": "romod:block/dark_iron_bars_side",
+        "model": "romod:block/reinforced_iron_bars_side",
         "y": 90
       }
     },
@@ -84,7 +84,7 @@
         "south": "true"
       },
       "apply": {
-        "model": "romod:block/dark_iron_bars_side_alt"
+        "model": "romod:block/reinforced_iron_bars_side_alt"
       }
     },
     {
@@ -92,7 +92,7 @@
         "west": "true"
       },
       "apply": {
-        "model": "romod:block/dark_iron_bars_side_alt",
+        "model": "romod:block/reinforced_iron_bars_side_alt",
         "y": 90
       }
     }

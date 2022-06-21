@@ -2,34 +2,27 @@
   "schemaVersion": 1,
   "id": "romod",
   "version": "${version}",
-
   "name": "Fabric Reinforced Obsidian",
   "description": "Adds the EnderIO reinforced obsidian in the most recent versions of Minecraft.",
   "authors": [
     "yGlobalista"
   ],
   "contact": {
-    "homepage": "https://github.com/globalista-dev",
-    "sources": "https://github.com/globalista-dev/Fabric-Reinforced-Obsidian"
+    "homepage": "https://github.com/yglobalista",
+    "sources": "https://github.com/yglobalista/Fabric-Reinforced-Obsidian"
   },
-
-  "license": "MIT",
+  "license": "CC BY 4.0",
   "icon": "assets/romod/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
       "com.globalista.romod.RoMod"
     ]
   },
-
   "depends": {
     "fabricloader": ">=0.14.7",
     "fabric": "*",
     "minecraft": "1.19",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
