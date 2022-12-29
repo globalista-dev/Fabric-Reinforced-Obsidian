@@ -1,10 +1,10 @@
 package com.globalista.romod;
 
-import com.globalista.romod.block.ModBlocks;
+import com.globalista.romod.block.ROBlocks;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.ItemGroup;
@@ -13,15 +13,15 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.globalista.romod.block.ModBlocks.*;
+import static com.globalista.romod.block.ROBlocks.*;
 
-public class RoMod implements ModInitializer {
+public class ROMod implements ModInitializer {
 
     public static final String MOD_ID = "romod";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-    public static final ItemGroup ROGROUP = FabricItemGroupBuilder.build(new Identifier(RoMod.MOD_ID, "rogroup"),
-            () -> new ItemStack(ModBlocks.REINFORCED_OBSIDIAN));
+    public static final ItemGroup ROGROUP = FabricItemGroup.builder(new Identifier(ROMod.MOD_ID, "rogroup")).icon(()
+            -> new ItemStack(ROBlocks.REINFORCED_OBSIDIAN)).build();
 
     @Override
     public void onInitialize() {
@@ -33,7 +33,7 @@ public class RoMod implements ModInitializer {
             BlockRenderLayerMap.INSTANCE.putBlock(REINFORCED_GLASS, RenderLayer.getTranslucent());
         }
 
-        ModBlocks.callBlocks();
+        ROBlocks.callBlocks();
 
         LOGGER.info("Fabric Reinforced Obsidian!");
     }

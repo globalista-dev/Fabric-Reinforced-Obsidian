@@ -16,13 +16,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.globalista.romod.RoMod"
+      "com.globalista.romod.ROMod"
     ]
   },
   "depends": {
     "fabricloader": ">=0.14.7",
     "fabric": "*",
-    "minecraft": "1.19.X",
+    "minecraft": "1.19.3",
     "java": ">=17"
   }
 }
