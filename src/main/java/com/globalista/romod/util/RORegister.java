@@ -26,10 +26,6 @@ public class RORegister {
         return Registry.register(Registries.BLOCK, new Identifier(MOD_ID, name), block);
     }
 
-    public static Item registerItem(String name, Item item, ItemGroup tab) {
-        ItemGroupEvents.modifyEntriesEvent(tab).register(content -> {
-            content.add(item);});
-        return Registry.register(Registries.ITEM, new Identifier(MOD_ID, name), item);
-    }
+
 
 }
