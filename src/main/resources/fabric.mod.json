@@ -3,7 +3,7 @@
   "id": "romod",
   "version": "${version}",
   "name": "Fabric Reinforced Obsidian",
-  "description": "Adds the EnderIO reinforced obsidian in the most recent versions of Minecraft.",
+  "description": "Adds a Wither-Proof block called Reinforced Obsidian.",
   "authors": [
     "yGlobalista"
   ],
@@ -16,13 +16,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.globalista.romod.ROMod"
+      "com.globalista.romod.ReinforcedObsidian"
     ]
   },
   "depends": {
     "fabricloader": ">=0.14.7",
     "fabric": "*",
-    "minecraft": "1.20.1",
+    "minecraft": "1.20.2",
     "java": ">=17"
   }
 }
