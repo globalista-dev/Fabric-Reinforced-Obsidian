@@ -20,6 +20,7 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -58,10 +59,12 @@ public class ReinforcedObsidian implements ModInitializer {
             new PaneBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).strength(7.0f, 92.8f).requiresTool().nonOpaque().sounds(BlockSoundGroup.METAL)));
 
     public static final Block REINFORCED_GLASS = registerBlock("reinforced_glass",
-            new GlassBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.GLASS).strength(0.3f, 3600000.0f).nonOpaque().sounds(BlockSoundGroup.GLASS)));
+            new StainedGlassBlock(DyeColor.LIGHT_GRAY, FabricBlockSettings.create().sounds(BlockSoundGroup.GLASS).strength(0.3f, 3600000.0f).nonOpaque()
+                    .sounds(BlockSoundGroup.GLASS).allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
 
     public static final Block REINFORCED_TINTED_GLASS = registerBlock("reinforced_tinted_glass",
-            new TintedGlassBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.GLASS).strength(0.3f, 3600000.0f).nonOpaque().sounds(BlockSoundGroup.GLASS)));
+            new TintedGlassBlock(FabricBlockSettings.create().sounds(BlockSoundGroup.GLASS).strength(0.3f, 3600000.0f).nonOpaque()
+                    .sounds(BlockSoundGroup.GLASS).allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
 
     @Override
     public void onInitialize() {
