@@ -36,12 +36,16 @@ public class ReinforcedObsidian implements ModInitializer {
     public static Block REINFORCED_GLASS;
     public static Block REINFORCED_TINTED_GLASS;
 
-    public static final RegistryKey<ItemGroup> ROGROUP = RegistryKey.of(
+    public static final RegistryKey<ItemGroup> ROGROUP_KEY = RegistryKey.of(
             RegistryKeys.ITEM_GROUP, Identifier.of(MOD_ID, "rogroup"));
+    public static final ItemGroup ROGROUP = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(Registries.ITEM.get(Identifier.of(MOD_ID, "reinforced_obsidian"))))
+            .displayName(Text.translatable("itemGroup.romod.rogroup"))
+            .build();
 
     private static Item registerBlockItem(String name, Block block) {
         Item item = Registry.register(Registries.ITEM, Identifier.of(MOD_ID, name), new BlockItem(block, new Item.Settings()));
-        ItemGroupEvents.modifyEntriesEvent(ROGROUP).register(content -> content.add(block));
+        ItemGroupEvents.modifyEntriesEvent(ROGROUP_KEY).register(content -> content.add(item));
         return item;
     }
 
@@ -86,10 +90,7 @@ public class ReinforcedObsidian implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        Registry.register(Registries.ITEM_GROUP, ROGROUP, FabricItemGroup.builder()
-                .icon(() -> new ItemStack(REINFORCED_OBSIDIAN))
-                .displayName(Text.translatable("itemGroup.romod.rogroup"))
-                .build());
+        Registry.register(Registries.ITEM_GROUP, ROGROUP_KEY, ROGROUP);
 
         File configFile = FabricLoader.getInstance().getConfigDir().resolve("romod.json").toFile();
         Config config = Config.loadConfigFile(configFile);
