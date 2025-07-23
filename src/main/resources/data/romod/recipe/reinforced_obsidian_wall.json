@@ -1,6 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
+    "###",
     "###"
   ],
   "key": {
@@ -9,7 +10,7 @@
     }
   },
   "result": {
-    "item": "romod:reinforced_obsidian_slab",
-    "count": 3
+    "id": "romod:reinforced_obsidian_wall",
+    "count": 6
   }
 }

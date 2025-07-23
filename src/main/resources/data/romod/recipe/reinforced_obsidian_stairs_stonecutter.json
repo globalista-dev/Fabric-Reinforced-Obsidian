@@ -3,6 +3,8 @@
   "ingredient": {
     "item": "romod:reinforced_obsidian"
   },
-  "result": "romod:reinforced_obsidian_wall",
-  "count": 1
+  "result": {
+    "id": "romod:reinforced_obsidian_stairs",
+    "count": 1
+  }
 }
