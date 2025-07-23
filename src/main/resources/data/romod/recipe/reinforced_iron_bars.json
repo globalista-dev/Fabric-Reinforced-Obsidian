@@ -5,12 +5,8 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    },
-    "I": {
-      "item": "minecraft:netherite_ingot"
-    }
+    "#": "minecraft:iron_ingot",
+    "I": "minecraft:netherite_ingot"
   },
   "result": {
     "id": "romod:reinforced_iron_bars",

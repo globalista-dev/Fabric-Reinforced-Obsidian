@@ -1,10 +1,10 @@
 {
-  "block.romod.reinforced_obsidian": "Obsidiana reforçada",
-  "block.romod.reinforced_glass": "Vidro reforçado",
-  "block.romod.reinforced_tinted_glass": "Vidro fosco reforçado",
-  "block.romod.reinforced_obsidian_slab": "Laje de obsidiana reforçada",
-  "block.romod.reinforced_obsidian_stairs": "Escadas de obsidiana reforçada",
-  "block.romod.reinforced_obsidian_wall": "Parede de obsidiana reforçada",
-  "block.romod.reinforced_iron_bars": "Grades de ferro reforçado",
+  "item.romod.reinforced_obsidian": "Obsidiana reforçada",
+  "item.romod.reinforced_glass": "Vidro reforçado",
+  "item.romod.reinforced_tinted_glass": "Vidro fosco reforçado",
+  "item.romod.reinforced_obsidian_slab": "Laje de obsidiana reforçada",
+  "item.romod.reinforced_obsidian_stairs": "Escadas de obsidiana reforçada",
+  "item.romod.reinforced_obsidian_wall": "Parede de obsidiana reforçada",
+  "item.romod.reinforced_iron_bars": "Grades de ferro reforçado",
   "itemGroup.romod.rogroup": "Obsidiana reforçada para Fabric"
 }

@@ -26,6 +26,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.File;
+import java.util.function.Function;
 
 public class ReinforcedObsidian implements ModInitializer {
 
@@ -39,39 +40,43 @@ public class ReinforcedObsidian implements ModInitializer {
             .displayName(Text.translatable("itemGroup.romod.rogroup"))
             .build();
 
-    private static Item registerBlockItem(String name, Block block) {
-        Item item = Registry.register(Registries.ITEM, Identifier.of(MOD_ID, name), new BlockItem(block, new Item.Settings()));
-        ItemGroupEvents.modifyEntriesEvent(ROGROUP_KEY).register(content -> content.add(item));
-        return item;
+    private static Block register(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings) {
+
+        var blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(MOD_ID, name));
+        var itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, name));
+
+        Block block = blockFactory.apply(settings.registryKey(blockKey));
+
+        BlockItem blockItem = new BlockItem(block, new Item.Settings().registryKey(itemKey));
+        Registry.register(Registries.ITEM, itemKey, blockItem);
+
+        ItemGroupEvents.modifyEntriesEvent(ROGROUP_KEY).register(content -> content.add(blockItem));
+
+        return Registry.register(Registries.BLOCK, blockKey, block);
     }
 
-    public static Block registerBlock(String name, Block block) {
-        registerBlockItem(name, block);
-        return Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, name), block);
-    }
 
-    public static final Block REINFORCED_OBSIDIAN = registerBlock("reinforced_obsidian",
-            new Block(Block.Settings.create().sounds(BlockSoundGroup.STONE).strength(50.0f, 3600000.0f).requiresTool()));
+    public static final Block REINFORCED_OBSIDIAN = register("reinforced_obsidian", Block::new, Block.Settings.create().sounds(BlockSoundGroup.STONE).strength(50.0f, 3600000.0f).requiresTool());
 
-    public static final Block REINFORCED_IRON_BARS = registerBlock("reinforced_iron_bars",
-            new PaneBlock(Block.Settings.create().sounds(BlockSoundGroup.METAL).strength(7.0f, 92.8f).requiresTool().nonOpaque().sounds(BlockSoundGroup.METAL)));
+    public static final Block REINFORCED_IRON_BARS = register("reinforced_iron_bars",
+            PaneBlock::new, Block.Settings.create().sounds(BlockSoundGroup.METAL).strength(7.0f, 92.8f).requiresTool().nonOpaque().sounds(BlockSoundGroup.METAL));
 
-    public static final Block REINFORCED_OBSIDIAN_SLAB = registerBlock("reinforced_obsidian_slab",
-            new SlabBlock(Block.Settings.copy(REINFORCED_OBSIDIAN)));
+    public static final Block REINFORCED_OBSIDIAN_SLAB = register("reinforced_obsidian_slab",
+            SlabBlock::new, Block.Settings.copy(REINFORCED_OBSIDIAN));
 
-    public static final Block REINFORCED_OBSIDIAN_WALL = registerBlock("reinforced_obsidian_wall",
-            new WallBlock(Block.Settings.copy(REINFORCED_OBSIDIAN)));
+    public static final Block REINFORCED_OBSIDIAN_WALL = register("reinforced_obsidian_wall",
+            WallBlock::new, Block.Settings.copy(REINFORCED_OBSIDIAN));
 
-    public static final Block REINFORCED_OBSIDIAN_STAIRS = registerBlock("reinforced_obsidian_stairs",
-            new StairsBlock(REINFORCED_OBSIDIAN.getDefaultState(), Block.Settings.copy(REINFORCED_OBSIDIAN)));
+    public static final Block REINFORCED_OBSIDIAN_STAIRS = register("reinforced_obsidian_stairs", (settings) ->
+            new StairsBlock(REINFORCED_OBSIDIAN.getDefaultState(), settings), Block.Settings.copy(REINFORCED_OBSIDIAN));
 
-    public static final Block REINFORCED_GLASS = registerBlock("reinforced_glass",
-            new StainedGlassBlock(DyeColor.LIGHT_GRAY, Block.Settings.create().sounds(BlockSoundGroup.GLASS).strength(0.3f, 3600000.0f).nonOpaque()
-                    .sounds(BlockSoundGroup.GLASS).allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block REINFORCED_GLASS = register("reinforced_glass", (settings) ->
+            new StainedGlassBlock(DyeColor.GRAY, settings), Block.Settings.create().sounds(BlockSoundGroup.GLASS).strength(0.3f, 3600000.0f).nonOpaque()
+            .sounds(BlockSoundGroup.GLASS).allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never));
 
-    public static final Block REINFORCED_TINTED_GLASS = registerBlock("reinforced_tinted_glass",
-            new TintedGlassBlock(Block.Settings.create().sounds(BlockSoundGroup.GLASS).strength(0.3f, 3600000.0f).nonOpaque()
-                    .sounds(BlockSoundGroup.GLASS).allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never)));
+    public static final Block REINFORCED_TINTED_GLASS = register("reinforced_tinted_glass",
+            TintedGlassBlock::new, Block.Settings.create().sounds(BlockSoundGroup.GLASS).strength(0.3f, 3600000.0f).nonOpaque()
+                    .sounds(BlockSoundGroup.GLASS).allowsSpawning(Blocks::never).solidBlock(Blocks::never).suffocates(Blocks::never).blockVision(Blocks::never));
 
     @Override
     public void onInitialize() {

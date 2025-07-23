@@ -6,15 +6,9 @@
     "#I#"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:obsidian"
-    },
-    "I": {
-      "item": "romod:reinforced_iron_bars"
-    },
-    "O": {
-      "item": "minecraft:glass"
-    }
+    "#": "minecraft:obsidian",
+    "I": "romod:reinforced_iron_bars",
+    "O": "minecraft:glass"
   },
   "result": {
     "id": "romod:reinforced_glass",

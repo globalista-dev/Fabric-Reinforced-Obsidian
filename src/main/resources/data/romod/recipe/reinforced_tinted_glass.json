@@ -6,12 +6,8 @@
     " I "
   ],
   "key": {
-    "I": {
-      "item": "minecraft:amethyst_shard"
-    },
-    "O": {
-      "item": "romod:reinforced_glass"
-    }
+    "I": "minecraft:amethyst_shard",
+    "O": "romod:reinforced_glass"
   },
   "result": {
     "id": "romod:reinforced_tinted_glass",

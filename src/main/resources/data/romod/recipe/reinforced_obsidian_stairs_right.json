@@ -6,9 +6,7 @@
     "###"
   ],
   "key": {
-    "#": {
-      "item": "romod:reinforced_obsidian"
-    }
+    "#": "romod:reinforced_obsidian"
   },
   "result": {
     "id": "romod:reinforced_obsidian_stairs",
