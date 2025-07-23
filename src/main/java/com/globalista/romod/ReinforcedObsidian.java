@@ -2,13 +2,12 @@ package com.globalista.romod;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.impl.tag.convention.v2.TagRegistration;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.*;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -17,7 +16,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagGroupLoader;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.text.Text;
 import net.minecraft.util.DyeColor;
@@ -25,7 +23,6 @@ import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.util.function.Function;
 
 public class ReinforcedObsidian implements ModInitializer {
@@ -84,9 +81,9 @@ public class ReinforcedObsidian implements ModInitializer {
         Registry.register(Registries.ITEM_GROUP, ROGROUP_KEY, ROGROUP);
 
         if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
-            BlockRenderLayerMap.INSTANCE.putBlock(REINFORCED_IRON_BARS, RenderLayer.getCutout());
-            BlockRenderLayerMap.INSTANCE.putBlock(REINFORCED_TINTED_GLASS, RenderLayer.getTranslucent());
-            BlockRenderLayerMap.INSTANCE.putBlock(REINFORCED_GLASS, RenderLayer.getTranslucent());
+            BlockRenderLayerMap.putBlock(REINFORCED_IRON_BARS, BlockRenderLayer.CUTOUT);
+            BlockRenderLayerMap.putBlock(REINFORCED_TINTED_GLASS, BlockRenderLayer.TRANSLUCENT);
+            BlockRenderLayerMap.putBlock(REINFORCED_GLASS, BlockRenderLayer.TRANSLUCENT);
         }
 
         LOGGER.info("[Reinforced Obsidian] Mod loaded");
